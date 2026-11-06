@@ -1,0 +1,8 @@
+import {contextBridge,ipcRenderer} from 'electron';
+contextBridge.exposeInMainWorld('unstuck',Object.freeze({scanCleanup:()=>ipcRenderer.invoke('scanCleanup'),cleanFiles:(plan:unknown,ids:unknown)=>ipcRenderer.invoke('cleanFiles',plan,ids),repairDns:()=>ipcRenderer.invoke('repairDns'),onlineHelp:(query:unknown)=>ipcRenderer.invoke('onlineHelp',query),openNotices:()=>ipcRenderer.invoke('openNotices'),openSupportLink:(id:string)=>ipcRenderer.invoke('openSupportLink',id),info:()=>ipcRenderer.invoke('info'),copyReport:(draft:unknown)=>ipcRenderer.invoke('copyReport',draft),exportReport:(draft:unknown)=>ipcRenderer.invoke('exportReport',draft),onNavigate:(listener:(page:string)=>void)=>{const receive=(_event:unknown,page:unknown)=>{if(typeof page==='string'&&['About','Help & Support','Report a Problem'].includes(page))listener(page)};ipcRenderer.on('app:navigate',receive);return()=>ipcRenderer.removeListener('app:navigate',receive)},copyShortcut:(keys:string)=>ipcRenderer.invoke('copyShortcut',keys),cancelDiagnostic:()=>ipcRenderer.invoke('cancelDiagnostic'),support:(key:string)=>ipcRenderer.invoke('support',key),showPalette:()=>ipcRenderer.invoke('showPalette'),hidePalette:()=>ipcRenderer.invoke('hidePalette'),activation:()=>ipcRenderer.invoke('activation'),state:()=>ipcRenderer.invoke('state'),save:(p:unknown)=>ipcRenderer.invoke('save',p),clear:()=>ipcRenderer.invoke('clear'),system:()=>ipcRenderer.invoke('system'),diagnose:()=>ipcRenderer.invoke('diagnose'),open:(id:string)=>ipcRenderer.invoke('open',id),folder:()=>ipcRenderer.invoke('folder'),shortcut:(key:string)=>ipcRenderer.invoke('shortcut',key)}));
+
+
+
+
+
+

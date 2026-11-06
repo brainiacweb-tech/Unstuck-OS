@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="270" viewBox="0 0 1180 270"><title>Unstuck OS logo and tagline</title>
+ <g transform="translate(0,8)"><rect width="256" height="256" rx="56" fill="#0D1728"/><g fill="none" stroke="#12B8A6" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M66 74V145C66 174 85 191 118 191C151 191 169 173 169 143V112L193 84"/>
+  <path d="M166 84H193V111"/>
+</g></g>
+ <text x="292" y="141" fill="#0D1728" font-family="Raleway, Arial, sans-serif" font-size="96" font-weight="700" letter-spacing="-3">Unstuck<tspan fill="#12B8A6"> OS</tspan></text>
+ <text x="299" y="202" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500">Your PC. Uncomplicated.</text>
+</svg>

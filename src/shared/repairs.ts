@@ -1,0 +1,7 @@
+export type CleanupEntry={id:string;name:string;bytes:number;modified:string};
+export type CleanupPlan={id:string;expires:string;location:string;entries:CleanupEntry[];eligibleBytes:number;scanned:number;limited:boolean;availableBytes:number;totalBytes:number};
+export type CleanupResult={deleted:number;skipped:number;removedBytes:number;availableBytes:number;message:string};
+export type RepairResult={cancelled:boolean;commandCompleted:boolean;before:import('./types').Finding[];after:import('./types').Finding[];message:string};
+export type IssueKind='storage'|'network'|'media'|'performance'|'activation'|'display'|'updates'|'applications'|'unknown';
+export function classifyIssue(text:string):IssueKind{const q=text.toLowerCase();if(/storage|disk|drive.{0,12}full|space|junk|temporary files|cleanup|clean up/.test(q))return 'storage';if(/internet|wi.?fi|network|dns|connection|offline|website/.test(q))return 'network';if(/microphone|camera|webcam|audio|speaker|sound/.test(q))return 'media';if(/slow|performance|freez|memory|overheat|battery/.test(q))return 'performance';if(/activat|licen[cs]|product key/.test(q))return 'activation';if(/display|screen|resolution|brightness/.test(q))return 'display';if(/updat|upgrade/.test(q))return 'updates';if(/application|install|uninstall|\bapp\b|program/.test(q))return 'applications';return 'unknown'}
+export function validIssue(query:unknown):query is string{return typeof query==='string'&&query.trim().length>=3&&query.length<=500&&![...query].some(c=>c.charCodeAt(0)<32||c.charCodeAt(0)===127)}

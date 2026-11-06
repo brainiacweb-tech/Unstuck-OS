@@ -1,0 +1,21 @@
+node_modules/
+dist/
+release/
+test-results/
+*.log
+
+# Generated local QA output and screenshots (may contain machine details)
+docs/*-QA.json
+docs/*-LAUNCH.json
+docs/QA-RESULTS.json
+store-assets/*.png
+store-assets/layout/
+
+# Local credentials and signing material
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12

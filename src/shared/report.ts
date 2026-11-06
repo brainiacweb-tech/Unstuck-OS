@@ -1,0 +1,6 @@
+import type {Finding} from './types';
+export const reportCategories=['Search or navigation','Diagnostic result','Camera or microphone','Windows settings','Accessibility','Other'] as const;
+export type ReportDraft={category:string;description:string;diagnostics:Finding[]};
+export type AppInfo={version:string;electron:string;node:string;packaged:boolean;links?:{id:string;label:string}[]};
+export function validReport(value:unknown):value is ReportDraft{if(!value||typeof value!=='object')return false;const r=value as ReportDraft;return reportCategories.includes(r.category as typeof reportCategories[number])&&typeof r.description==='string'&&r.description.trim().length>0&&r.description.length<=8000&&Array.isArray(r.diagnostics)&&r.diagnostics.length<=20&&r.diagnostics.every(f=>f&&typeof f.name==='string'&&f.name.length<=200&&typeof f.evidence==='string'&&f.evidence.length<=16000&&['Passed','Failed','Warning','Unsupported','Permission required','Inconclusive'].includes(f.status))}
+export function formatReport(version:string,r:ReportDraft){return `Unstuck OS ${version}\nCategory: ${r.category}\n\nDescription\n${r.description.trim()}\n\nDiagnostic information\n${r.diagnostics.length?r.diagnostics.map(f=>`${f.name}: ${f.status}\n${f.evidence}`).join('\n\n'):'Not included.'}\n\nPrepared locally. Nothing has been sent automatically.`}
