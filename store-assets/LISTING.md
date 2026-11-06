@@ -1,36 +1,21 @@
-# Microsoft Store listing draft
+# Microsoft Store listing
 
-App name: Unstuck OS
-Subtitle: Your PC. Uncomplicated.
-Version: 1.0.0
-Category: Utilities / Productivity
-Price: Free
+Use [SUBMISSION-ANSWERS.md](SUBMISSION-ANSWERS.md) for the complete, copy-and-paste field sheet, descriptions, features, privacy declarations, age-rating guidance, certification notes and asset links.
 
-## Short description
+| Field | Value |
+|---|---|
+| App name | Unstuck OS |
+| Tagline | Your PC. Uncomplicated. |
+| Developed by | Francis Kusi |
+| Primary category | Utilities + tools |
+| Optional secondary category | Productivity |
+| Price | Free |
+| Language | English (United States), en-US |
+| Short description | Find Windows settings, troubleshoot everyday PC problems, discover shortcuts, and run supported repairs with your approval—all in one privacy-first desktop app. |
+| Product/project website | https://github.com/brainiacweb-tech/Unstuck-OS |
+| Support URL | https://github.com/brainiacweb-tech/Unstuck-OS/issues |
+| Privacy policy | https://github.com/brainiacweb-tech/Unstuck-OS/blob/main/docs/PRIVACY.md |
 
-Find settings, solve everyday Windows problems, discover shortcuts, and take control of your computer—all in one place.
+Store-sized actual screenshots: [submission/screenshots](submission/screenshots). They show the dark and light Issue assistant, Help Center and keyboard shortcuts. No diagnostics were run or results simulated for these images. Screenshot captions and direct downloads are in the field sheet.
 
-## Full description
-
-Your PC. Uncomplicated.
-
-Less searching. More doing.
-
-Find settings, solve everyday Windows problems, discover shortcuts, and take control of your computer—all in one place.
-
-Unstuck OS brings useful Windows tasks into a searchable local workspace. Explore settings, inspect your PC, test your connection, check your microphone and camera, and follow practical guidance. Stay in control: actions are explained, media tests request permission, and folder creation requires approval.
-
-Search and guidance work offline. Fonts and brand assets are included locally. Choose the default midnight navy theme or light mode. Pin favorite actions and use the keyboard-first Quick Access window.
-
-Network tests contact Microsoft endpoints and do not guarantee that every internet service works. Hardware, Windows edition and policy can affect available checks. This third-party utility is not affiliated with Microsoft and does not replace Windows. It does not bypass licensing, disable security protections, delete personal files or promise performance gains.
-
-Keywords: Windows settings, troubleshooting, keyboard shortcuts, productivity, camera, microphone, network
-Requirements: Windows 10 build 19041 or later, x64; Windows 11 recommended. Camera/microphone required for respective tests.
-Accessibility: keyboard navigation, local fonts, visible blue focus, dark/light modes and reduced-motion support. Complete assistive technology acceptance remains pending.
-Support email / legal publisher / public privacy URL: TO BE PROVIDED.
-Release notes: Initial development candidate. Release checklist and certification must be completed before publication.
-Certification notes: Desktop Electron application; local preferences/history; no persistent service or startup elevation. Media only on explicit test. No recording, trackers or analytics.
-
-Brand sources: brand/. Windows ICO: icon.ico. PNG exports: exports/. Actual screenshots: dashboard-dark.png, dashboard-light.png, welcome-dark.png, troubleshooting.png, quick-access.png. Font/software notices: licenses/. Privacy policy: ../docs/PRIVACY.md. Brand guide: ../docs/BRAND.md.
-
-No Store upload, certification, endorsements, reviews or download claims have been made.
+Package identity remains unresolved: copy the exact values from Partner Center into identity.json. The app has no completed Store MSIX acceptance or certification result. Do not substitute a portable executable for an MSIX package upload, invent publisher/contact information, or claim blanket automatic repair, antivirus protection or Microsoft affiliation.

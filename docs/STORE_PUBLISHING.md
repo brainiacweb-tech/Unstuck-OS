@@ -13,7 +13,8 @@ Official references checked 2026-11-06:
 4. Install the Windows SDK packaging and Windows App Certification Kit tools. Check current stable packaging support. Generate the MSIX using MakeAppx or a maintained verified MSIX builder.
 5. Validate manifest, package installation and WACK. Test clean Windows 10/11 VMs, fresh user profile, permission denial, shortcut conflicts, offline use, upgrades and uninstall. Record actual results.
 6. Complete properties, free pricing, markets and age ratings accurately. Do not guess privacy answers.
-7. Add real publisher support email, public privacy URL, Store identity, original icons and actual screenshots. Upload the x64 MSIX and listing through Partner Center for the first submission.
+7. Add real publisher support contact URL or email, public privacy URL, Store identity, original icons and actual screenshots. Upload the x64 MSIX and listing through Partner Center for the first submission.
 8. Review certification notes and submit only after release blockers close. Wait for Microsoft certification; publication is not automatic evidence of testing.
 
 No authenticated Partner Center connection is available here. No package has been uploaded or certified. Store CLI update support must not be treated as proof that first publication can be automated. Store re-signing means no publisher certificate information should be fabricated for submission.
+
